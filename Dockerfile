@@ -2,6 +2,7 @@ FROM ruby:2.3
 MAINTAINER xkumiyu <xkumiyu@gmail.com>
 
 RUN echo 'deb http://packages.linuxmint.com debian import' >> /etc/apt/sources.list
+RUN apt-get install debian-archive-keyring -qqy
 RUN apt-get update -qqy
 # RUN apt-get install -y sqlite3
 # RUN apt-get install -y libsqlite3-dev
