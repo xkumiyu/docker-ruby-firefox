@@ -1,10 +1,12 @@
-FROM ubutnu:14.04
+FROM ubuntu:14.04
 MAINTAINER xkumiyu <xkumiyu@gmail.com>
 
 RUN echo 'deb http://packages.linuxmint.com debian import' >> /etc/apt/sources.list
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise universe" >> /etc/apt/sources.list
+RUN apt-get install -qqy software-properties-common
+
 RUN add-apt-repository -y ppa:chris-lea/node.js
-RUN add-apt-repository -qqy ppa:brightbox/ruby-ng
+RUN add-apt-repository -y ppa:brightbox/ruby-ng
 
 RUN apt-get update -qqy
 RUN apt-get install -qqy --force-yes build-essential curl git zlib1g-dev libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt-dev
