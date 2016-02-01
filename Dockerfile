@@ -12,6 +12,7 @@ RUN apt-get update -qqy
 RUN apt-get install -qqy --force-yes build-essential curl git zlib1g-dev libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt-dev
 
 RUN apt-get install -qqy --no-install-recommends ruby2.3
+RUN apt-get install -qqy --no-install-recommends ruby2.3-dev
 RUN gem install bundler --no-ri --no-rdoc
 
 RUN apt-get install -qqy --no-install-recommends sqlite3 libsqlite3-dev
