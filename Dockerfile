@@ -16,6 +16,7 @@ RUN apt-get install -qqy --no-install-recommends ruby2.3-dev
 RUN gem install bundler --no-ri --no-rdoc
 
 RUN apt-get install -qqy --no-install-recommends sqlite3 libsqlite3-dev
+RUN apt-get install -qqy --no-install-recommends postgresql postgresql-client libpq-dev
 RUN apt-get install -qqy --no-install-recommends nodejs
 RUN apt-get install -qqy --no-install-recommends apt-utils
 RUN apt-get install -qqy --no-install-recommends xvfb
