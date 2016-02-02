@@ -21,11 +21,14 @@ RUN apt-get install -qqy --no-install-recommends nodejs
 RUN apt-get install -qqy --no-install-recommends apt-utils
 RUN apt-get install -qqy --no-install-recommends xvfb x11-xkb-utils
 RUN apt-get install -qqy --force-yes --no-install-recommends firefox
-
 RUN apt-get install -qqy --no-install-recommends language-pack-ja-base language-pack-ja ibus-mozc
-RUN source /etc/default/locale
 
 RUN rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 RUN apt-get clean
+
+RUN update-locale LANG=ja_JP.UTF-8 LANGUAGE=ja_JP:ja
+ENV LANG ja_JP.UTF-8
+ENV LC_ALL ja_JP.UTF-8
+ENV LC_CTYPE ja_JP.UTF-8
 
 ENV DISPLAY :99
