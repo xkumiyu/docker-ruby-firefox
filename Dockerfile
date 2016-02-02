@@ -19,7 +19,7 @@ RUN apt-get install -qqy --no-install-recommends sqlite3 libsqlite3-dev
 RUN apt-get install -qqy --no-install-recommends postgresql postgresql-client libpq-dev
 RUN apt-get install -qqy --no-install-recommends nodejs
 RUN apt-get install -qqy --no-install-recommends apt-utils
-RUN apt-get install -qqy --no-install-recommends xvfb
+RUN apt-get install -qqy --no-install-recommends xvfb x11-xkb-utils
 RUN apt-get install -qqy --force-yes --no-install-recommends firefox
 
 RUN apt-get install -qqy install language-pack-ja-base language-pack-ja ibus-mozc
