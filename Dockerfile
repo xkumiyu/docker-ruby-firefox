@@ -18,9 +18,12 @@ RUN gem install bundler --no-ri --no-rdoc
 RUN apt-get install -qqy --no-install-recommends sqlite3 libsqlite3-dev
 RUN apt-get install -qqy --no-install-recommends postgresql postgresql-client libpq-dev
 RUN apt-get install -qqy --no-install-recommends nodejs
+
 RUN apt-get install -qqy --no-install-recommends apt-utils
-RUN apt-get install -qqy --no-install-recommends xvfb x11-xkb-utils
 RUN apt-get install -qqy --force-yes --no-install-recommends firefox
+RUN apt-get install -qqy --no-install-recommends xvfb x11-xkb-utilsN
+RUN apt-get install -qqy --no-install-recommends xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic
+RUN apt-get install -qqy --no-install-recommends x-ttcidfont-conf cabextract ttf-mscorefonts-installer
 RUN apt-get install -qqy --no-install-recommends language-pack-ja-base language-pack-ja ibus-mozc
 
 RUN rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
